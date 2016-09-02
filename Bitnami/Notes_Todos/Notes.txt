@@ -35,3 +35,10 @@ IMPORTANT: Do a bundle install --no-deployment to install render_parent gem.
 3. Import list of contacts
 ===============================
 Use http://www.redmine.org/plugins/redmine_contacts to develop a contacts CSV importer in Redmine.
+
+4. Automatically assign a default user per project
+=====================================================
+1. https://www.redmine.org/plugins/redmine_default_assign
+2. What does this mean: It allows you to specify a global default as well as per project defaults.
+3. TODO: When creating a new Issue, the default assigned user must be selected. 
+ -> Beware of the default user.
