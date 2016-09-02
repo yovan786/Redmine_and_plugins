@@ -28,9 +28,6 @@ http://www.redmine.org/plugins/redmine_watcher_groups
 
 2. Paste images from clipboard
 ====================================
-1. https://github.com/thorin/redmine_image_clipboard_paste
+1. https://github.com/credativUK/redmine_image_clipboard_paste
 2. To use Bitnami's Rails libraries: https://community.bitnami.com/t/how-to-create-a-new-plugin/6121/3
-
-3. Important: Test this plugin
-https://github.com/peclik/clipboard_image_paste
 
