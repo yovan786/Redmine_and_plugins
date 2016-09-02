@@ -32,3 +32,6 @@ http://www.redmine.org/plugins/redmine_watcher_groups
 IMPORTANT: Do a bundle install --no-deployment to install render_parent gem.
 2. To use Bitnami's Rails libraries: https://community.bitnami.com/t/how-to-create-a-new-plugin/6121/3
 
+3. Import list of contacts
+===============================
+Use http://www.redmine.org/plugins/redmine_contacts to develop a contacts CSV importer in Redmine.
