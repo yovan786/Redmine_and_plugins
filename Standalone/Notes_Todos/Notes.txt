@@ -1,0 +1,26 @@
+1. To install Redmine: http://www.redmine.org/projects/redmine/wiki/RedmineInstall
+
+2. This book continually references a sample plugin known as the Redmine Knowledgebase plugin.
+https://github.com/alexbevi/redmine_knowledgebase
+
+3. Our knowledgebase is a plugin that offers a hybrid solution that lies somewhere between Redmine's wiki and
+document functionality.
+It allows us to create articles that can be stored within categories. Categories are stored in a hierarchical fashion, so a category "tree" can be presented to users on the knowledgebase landing page - images/2016-09-01_122332.png
+
+We will create the knowledgebase plugin. But if we were  to install it go to the Github page.
+
+4. Official plugin tutorial: http://www.redmine.org/projects/redmine/wiki/Plugin_tutorial
+
+3. 
+a. Get the list of all generators in Redmine: rails generate
+RedminePlugin: redmine_plugin
+RedminePluginController: redmine_plugin_controller
+RedminePluginModel: redmine_plugin_model
+
+b. Source of the above generators: lib/generators in redmine.
+
+c. To learn about ROR generators: http://guides.rubyonrails.org/generators.html
+
+
+
+

@@ -1,0 +1,13 @@
+1. Install fresh versions of Redmine and Bitnami Redmine.
+2. Test the following plugins
+- Group watchers
+- Drag and drop images in issues
+- Custom fields per project
+
+3. The plugins development links
+- Create some basic examples
+- Import customers 
+  => CRUD for customers
+ => Delete all customers on new upload and import
+
+ 4. See user_import plugin

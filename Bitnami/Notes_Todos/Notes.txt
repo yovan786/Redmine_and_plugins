@@ -1,0 +1,28 @@
+1. Add groups as watchers
+===========================
+a. Download https://github.com/nauphone/redmine_watcher_groups, unzip in plugins folder and rename to redmine_watcher_groups.
+b. Add the following method to issues_helper.rb. Note: We got this method from: https://git.thm.de/projects.thm.de/redmine/commit/dd1c4cff0999b9f185ddf81d235ccaa9d238a318
+
+def users_for_new_issue_watchers(issue)
+    users = issue.watcher_users
+	if issue.project.users.count <= 20
+	  users = (users + issue.project.users.sort).uniq
+	end
+	users
+end
+
+c. Restart Bitnami.
+d. Test if plugin does not break code.
+e. TODO: move the helper method in the plugin project itself.
+
+Other group watchers links:
+https://github.com/wookayin/redmine_advanced_watchers_selection
+https://github.com/yyuu/redmine_watcher_groups
+http://www.redmine.org/plugins/watcher_sellection_by_group
+http://www.redmine.org/boards/3/topics/16247
+http://www.redmine.org/plugins/redmine_boards_watchers
+http://www.redmine.org/plugins/watcher_groups
+http://www.redmine.org/plugins/rmp_group_watchers
+http://www.redmine.org/plugins/redmine_watcher_groups
+
+

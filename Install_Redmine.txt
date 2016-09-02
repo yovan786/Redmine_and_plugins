@@ -1,0 +1,65 @@
+1. 
+CREATE DATABASE yovan_redmine_production CHARACTER SET utf8;
+CREATE DATABASE yovan_redmine_development CHARACTER SET utf8;
+CREATE DATABASE yovan_redmine_test CHARACTER SET utf8;
+CREATE USER 'yovan'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON yovan_redmine_production.* TO 'yovan'@'localhost';
+GRANT ALL PRIVILEGES ON yovan_redmine_development.* TO 'yovan'@'localhost';
+GRANT ALL PRIVILEGES ON yovan_redmine_test.* TO 'yovan'@'localhost';
+
+2. Move config/database.yml.example to config/database.yml.
+
+3. bundle install
+
+Remarks:
+Additional dependencies (Gemfile.local)
+If you need to load gems that are not required by Redmine core (eg. Puma, fcgi), create a file named Gemfile.local at the root of your redmine directory. It will be loaded automatically when running bundle install.
+Example:
+# Gemfile.local
+gem 'puma'
+
+4. Session store secret generation
+bundle exec rake generate_secret_token
+
+5. Database schema objects creation
+
+For development: 
+bundle exec rake db:migrate
+
+For production: 
+set RAILS_ENV=production
+bundle exec rake db:migrate
+
+6. Database default data set
+
+For development: 
+bundle exec rake redmine:load_default_data
+
+For production: 
+set RAILS_ENV=production 
+bundle exec rake redmine:load_default_data
+
+7. Start redmine
+For development:
+bundle exec rails server webrick
+
+For production: 
+bundle exec rails server webrick -e production
+
+8. Logging into the application
+login: admin
+password: admin
+
+9. Configure config/configuration.yml for email sending:
+# default configuration options for all environments
+default:
+  # Outgoing emails configuration (see examples above)
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      address: "mailtrap.io"
+      port: 2525
+      domain: "mailtrap.io"
+      authentication: :cram_md5
+      user_name: "17e308cb99cff0"
+      password: "bc61d64539a2a9"
