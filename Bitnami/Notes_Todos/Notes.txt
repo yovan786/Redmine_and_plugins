@@ -14,6 +14,7 @@ end
 c. Restart Bitnami.
 d. Test if plugin does not break code.
 e. TODO: move the helper method in the plugin project itself.
+f. Use the "Chinese version" so that we have the watchers on top and modify it so that we have the watchers in the sidebar also.
 
 Other group watchers links:
 https://github.com/wookayin/redmine_advanced_watchers_selection
@@ -25,4 +26,11 @@ http://www.redmine.org/plugins/watcher_groups
 http://www.redmine.org/plugins/rmp_group_watchers
 http://www.redmine.org/plugins/redmine_watcher_groups
 
+2. Paste images from clipboard
+====================================
+1. https://github.com/thorin/redmine_image_clipboard_paste
+2. To use Bitnami's Rails libraries: https://community.bitnami.com/t/how-to-create-a-new-plugin/6121/3
+
+3. Important: Test this plugin
+https://github.com/peclik/clipboard_image_paste
 
